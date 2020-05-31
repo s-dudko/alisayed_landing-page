@@ -185,8 +185,12 @@ body {
 
 .contact__form__item{
     position: relative;
-    margin-right: 1rem;
     width: 100%;
+    margin-right: 2rem;
+}
+
+.contact__form__item:last-child{
+    margin-right: 0;
 }
 
 .contact__form__form-input{
@@ -194,11 +198,11 @@ body {
     border: 1px solid white;
     background-color: transparent;
     border-radius: 15px;
-    width: 100%;
     resize: none;
     overflow: hidden;
     color: white;
     transition: .3s;
+    width: 100%;
 }
 
 .contact__form__form-label{
@@ -207,7 +211,7 @@ body {
     top: 1rem;
 }
 
-.contact__form__form-input::placeholder{
+.contact__form__form-textarea::placeholder{
     color: white;
 }
 
@@ -261,4 +265,66 @@ body {
 
 .footer-row__design__logo-img{
     width: 80px;
+}
+
+.contact__form__form-textarea{
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 1px solid white;
+    background-color: transparent;
+    border-radius: 15px;
+    resize: none;
+    overflow: hidden;
+    color: white;
+    transition: .3s;
+}
+
+@media all and (max-width: 1280px){
+    body{
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 1120px) {
+    .footer-row {
+        flex-direction: column;
+    }
+
+    .footer-row__design {
+        min-height: 500px;
+    }
+
+    .contact__form {
+        width: 100%;
+    }
+}
+
+
+
+@media all and (max-width: 880px) {
+    .header-row{
+        flex-direction: column-reverse;
+    }
+
+    .main-row{
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 480px){
+    body{
+        font-size: 8px;
+    }
+
+    .contact__form__form-input{
+        padding: 1rem;
+    }
+    .contact__form__form-label{
+        left: 1rem;
+    }
+
+    .contact__form__form-input:focus ~ .contact__form__form-label,
+    .contact__form__form-input:not(:placeholder-shown) ~ .contact__form__form-label{
+        left: 1rem;
+    }
 }
